@@ -25,6 +25,10 @@ public class CourseDBHelper extends SQLiteOpenHelper {
         db.execSQL(sql);
     }
 
+    //SELECT SUM(credit) cr, SUM(value*credit) gp FROM course;
+    //ITS333 <- text1
+    //A (1 credit) <- text2
+
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         String sql = "DROP TABLE IF EXISTS course;";
